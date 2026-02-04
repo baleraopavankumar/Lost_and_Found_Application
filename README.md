@@ -45,7 +45,7 @@ The database stores structured information related to users, items, payments, an
 
 Relationships between users and items are maintained to track ownership, claims, and sales of unclaimed items. This structured approach ensures data consistency and easy retrieval.
 
-<img src="https://github.com/your-username/lost-and-found-app/blob/main/Database_Schema.png"/>
+<img src="https://github.com/baleraopavankumar/Lost_and_Found_Application/blob/main/3.png"/>
 ---
 
 Item Lifecycle Management

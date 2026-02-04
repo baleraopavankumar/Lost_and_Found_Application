@@ -72,7 +72,7 @@ The Lost & Found Application significantly improves the recovery rate of lost it
 
 The structured workflow ensures that items are either returned to their rightful owners or responsibly managed by the institution.
 
-<img src="https://github.com/your-username/lost-and-found-app/blob/main/Results.png"/>
+<img src="https://github.com/baleraopavankumar/lost-and-found-app/blob/main/Results.png"/>
 ---
 
 Directions to Download the Repository and Run the Project
@@ -87,7 +87,7 @@ Directions to Download the Repository and Run the Project
 
 
 
-git clone https://github.com/your-username/lost-and-found-app.git
+git clone https://github.com/baleraopavankumar/lost-and-found-app.git
 
 4. After cloning, navigate to the project directory.
 

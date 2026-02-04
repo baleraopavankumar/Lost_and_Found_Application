@@ -54,7 +54,7 @@ If an item is not claimed within 1–2 months, it is automatically marked as unc
 
 Interested users can purchase these items through online payment, and the revenue generated is distributed according to predefined rules.
 
-<img src="https://github.com/baleraopavankumar/Lost_and_Found_Application/blob/main/1.png"/>
+<img src="https://github.com/baleraopavankumar/Lost_and_Found_Application/blob/main/2.png"/>
 ---
 
 Admin Dashboard

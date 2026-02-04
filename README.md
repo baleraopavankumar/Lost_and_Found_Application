@@ -1,248 +1,119 @@
-Lost and Found Application (Campus Asset Recovery System)
+Lost & Found Application
+
 
 ---
 
 Problem Statement
 
-In large campuses such as colleges and universities, lost personal items (ID cards, wallets, books, electronics, etc.) are a frequent issue. The absence of a centralized digital system leads to inefficiencies, delays, and misuse of found items.
+In a college campus, a large number of personal items such as ID cards, books, wallets, and electronic devices are lost every day. Due to the absence of a centralized system, it becomes difficult for owners to retrieve their belongings. The Lost & Found Application addresses this problem by allowing users to post details of found items and enabling owners to reclaim them efficiently.
 
-The Lost & Found Application aims to solve this problem by providing a secure, transparent, and real-time platform where:
+This system helps in improving transparency, accountability, and recovery rate of lost items while also introducing a structured process for handling unclaimed items within the campus.
 
-Found items can be reported with images and descriptions
-
-Owners can easily identify and reclaim their belongings
-
-Unclaimed items are responsibly handled by the institution
-
-A structured revenue-sharing mechanism benefits the finder, college, and admin
 
 ---
 
-Project Overview
+Full Stack Application Development
 
-Project Name: Lost & Found App (Codename: Found)
+Our approach involves building a full-stack application that allows users to report found items, search for lost items, and claim ownership securely. The application consists of a mobile app for users and a web-based admin dashboard for management and monitoring.
 
-Platform: Mobile Application (Android / iOS) + Web Admin Portal
+The backend handles authentication, item listings, payments, and notifications, while the frontend provides a user-friendly interface for interacting with the system. The complete workflow ensures smooth communication between finders, owners, and administrators.
 
-Target Users: Students, Faculty, College Administration
-
-Domain: Campus Utility / Asset Management
-
-Payment Model: Micro-payment based access (₹11 claim fee)
 
 ---
 
-Core Features
+Authentication and User Management
 
-User Registration & Authentication
+The application uses secure authentication mechanisms to ensure that only authorized users can access the platform. Users register using their college credentials or phone number, ensuring authenticity.
 
-Secure sign-up using college email or phone number
-
-Role-based access for Students, Staff, and Admin
-
-JWT-based authentication for API security
+Once authenticated, users are assigned roles such as Student, Staff, or Admin, each with different access levels. Sensitive information such as the finder’s contact details is hidden and revealed only after successful payment.
 
 
-Post Found Item
+---
 
-Upload item images
+Payment Integration
 
-Add detailed descriptions and identification marks
+To prevent misuse and ensure serious claims, the application introduces a small claim fee of ₹11. When an owner wishes to view the contact details of the person who found the item, the payment must be completed successfully.
 
-Location tagging (hostel, classroom, library, etc.)
-
-
-Claim Lost Item
-
-Owners can browse and search items
-
-To view finder’s contact details, user pays ₹11
-
-Contact details revealed only after successful payment
+A secure payment gateway is integrated to handle all transactions. The collected amount is split among the Admin, College, and Finder, ensuring fair compensation and sustainability of the system.
 
 
-Unclaimed Items & Marketplace
+---
 
-Items unclaimed for 1–2 months are listed for sale
+Database Design
 
-Price set by college or finder
+The database stores structured information related to users, items, payments, and claims. Each item listing contains details such as image, description, identification marks, and status (claimed/unclaimed).
 
-Supports buying used items directly within the app
+Relationships between users and items are maintained to track ownership, claims, and sales of unclaimed items. This structured approach ensures data consistency and easy retrieval.
 
+<img src="https://github.com/your-username/lost-and-found-app/blob/main/Database_Schema.png"/>
+---
 
-Payment & Revenue Distribution
+Item Lifecycle Management
 
-Integrated online payments
+If an item is not claimed within 1–2 months, it is automatically marked as unclaimed and transferred to the college management or finder based on policy. These items are then listed for sale within the application.
 
-Revenue split:
+Interested users can purchase these items through online payment, and the revenue generated is distributed according to predefined rules.
 
-10% → Admin
-
-40% → College
-
-40% → Finder
-
-
+<img src="https://github.com/baleraopavankumar/Lost_and_Found_Application/blob/main/Item_Flow.png"/>
+---
 
 Admin Dashboard
 
-Monitor all item postings and claims
+The admin dashboard provides complete control over the system. Administrators can view all posted items, approve listings, manage disputes, and monitor transactions.
 
-Approve or reject listings
-
-Manage disputes and item ownership
-
-Oversee payments and reports
-
-
-Notifications
-
-Real-time alerts for:
-
-New found items
-
-Claim approvals
-
-Sale listings
-
-Payment confirmations
-
-
+The dashboard also provides insights into claimed items, unclaimed items, and revenue distribution, ensuring transparency and effective management.
 
 
 ---
 
-System Architecture
+Results
 
-Frontend (Mobile): Flutter (Cross-platform Android & iOS)
+The Lost & Found Application significantly improves the recovery rate of lost items on campus. By digitizing the process and introducing secure payments and role-based access, the system minimizes manual effort and misuse.
 
-Frontend (Web): React.js (Admin Dashboard)
+The structured workflow ensures that items are either returned to their rightful owners or responsibly managed by the institution.
 
-Backend: Node.js with Express
-
-Database: Firebase / MySQL
-
-Storage: Firebase Storage / AWS S3
-
-Authentication: OAuth + JWT
-
-Payments: Razorpay
-
-Hosting: Firebase / AWS / Heroku
-
-
-
+<img src="https://github.com/your-username/lost-and-found-app/blob/main/Results.png"/>
 ---
 
-Workflow Explanation
+Directions to Download the Repository and Run the Project
 
-1. User finds an item on campus
-
-
-2. Item is posted with image & description
+1. Download and install Git from https://git-scm.com/downloads.
 
 
-3. Owner searches and identifies the item
+2. Right-click on the folder where you want to download the repository and select Git Bash Here.
 
 
-4. Owner pays ₹11 to unlock finder details
-
-
-5. Item is returned successfully
-OR
-
-
-6. If unclaimed for 1–2 months → item listed for sale
-
-
-7. Sale amount distributed as per revenue model
+3. Clone the repository using:
 
 
 
----
+git clone https://github.com/your-username/lost-and-found-app.git
 
-Security & Privacy
+4. After cloning, navigate to the project directory.
 
-User contact details are hidden by default
 
-Details shared only after verified payment
-
-Secure token-based API communication
-
-Online payments only (no cash handling)
+5. Install backend dependencies:
 
 
 
----
-
-Future Enhancements
-
-AI-based Image Matching to auto-suggest item matches
-
-In-app Chat System between finder and owner
-
-Push Notifications
-
-Expansion beyond campus (cafes, libraries, public spaces)
-
-Analytics dashboard for college administration
-
-
-
----
-
-Installation & Running the Project
-
-Prerequisites
-
-Git
-
-Node.js
-
-Flutter SDK
-
-Firebase account
-
-MySQL (optional)
-
-
-Clone Repository
-
-git clone https://github.com//lost-and-found-app.git
-
-Backend Setup
-
-cd backend
 npm install
 npm start
 
-Frontend (Flutter)
+6. For the mobile application, install Flutter dependencies:
+
+
 
 flutter pub get
 flutter run
 
-Web Admin Dashboard
+7. The web admin dashboard can be started using:
 
-cd admin-panel
-npm install
+
+
 npm start
 
-
----
-
-Conclusion
-
-The Lost & Found Application is a real-world, scalable, full-stack system designed to solve a practical campus problem while incorporating:
-
-Secure authentication
-
-Payment gateway integration
-
-Role-based access
-
-Revenue sharing logic
-
-Admin-level controls
+8. Once the servers are running, you can access the application and explore the features.
 
 
-This project demonstrates strong skills in system design, backend development, frontend integration, and real-world problem solving, making it highly suitable for Software Development Engineer (SDE) roles.
+
+That’s it. You should now be able to run and understand the project.
